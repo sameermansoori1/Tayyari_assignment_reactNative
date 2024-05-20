@@ -21,6 +21,7 @@ const TayyariScreen = ({ route }) => {
   const { category } = route.params;
 
   useEffect(() => {
+
     getQuestions();
   }, []);
 
@@ -106,7 +107,7 @@ const TayyariScreen = ({ route }) => {
                   backgroundColor: '#ebeef4',
                   justifyContent: 'center',
                   alignItems: 'center',
-                  paddingBottom: 10,
+                  paddingBottom: 0,
                 }}
                 onPress={() => navigateToQuestion(index - 1)}
                 disabled={index === 0}
@@ -131,7 +132,7 @@ const TayyariScreen = ({ route }) => {
                   backgroundColor: '#ebeef4',
                   justifyContent: 'center',
                   alignItems: 'center',
-                  paddingBottom: 10,
+                  paddingBottom: 0,
                 }}
                 onPress={() => navigateToQuestion(index + 1)}
                 disabled={index === questions.length - 1}
@@ -332,8 +333,8 @@ const styles = StyleSheet.create({
   },
   tryAgainButton: {
     backgroundColor: '#417df5',
-    padding: 10,
-    marginVertical: 10,
+    padding: 5,
+    marginVertical: 2,
     borderRadius: 5,
   },
   tryAgainButtonText: {
